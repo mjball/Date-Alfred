@@ -1,3 +1,6 @@
+#Just give me the download already
+http://tinyurl.com/date-alfred
+
 #What's this about?
 
 I got sick of firing up `node` or a browser JavaScript console for converting ms-since-epoch values to something I could actually understand.
