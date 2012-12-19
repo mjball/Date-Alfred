@@ -12,4 +12,6 @@ Supports [Extension Updater](http://jdfwarrior.tumblr.com/post/13826478125/exten
 
 #Requirements
 
+Alfred 1.x (and obviously the PowerPack).
+
 Requires [node](http://nodejs.org/) to be somewhere in a `$PATH` specified by `~/.profile`, `~/.bashrc`, or `~/.zshrc`. Sorry, Alfred shell script extensions don't load much by default.
