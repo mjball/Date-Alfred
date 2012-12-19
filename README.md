@@ -9,7 +9,7 @@ This is a shortcut for:
 
     λ node -pe 'new Date($YOUR_MILLISECONDS_HERE)'
 
-Supports [Extension Updater](http://jdfwarrior.tumblr.com/post/13826478125/extension-updater) (possibly excessive).
+Supports [Extension Updater](http://jdfwarrior.tumblr.com/post/13826478125/extension-updater) (possibly excessive, and currently broken).
 
 #Requirements
 
