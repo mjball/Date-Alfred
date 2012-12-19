@@ -1,5 +1,4 @@
-#Just give me the download already
-http://tinyurl.com/date-alfred
+#[Just give me the download already](https://github.com/mjball/Date-Alfred/blob/master/Date.alfredextension?raw=true)
 
 #What's this about?
 
@@ -9,7 +8,7 @@ This is a shortcut for:
 
     λ node -pe 'new Date($YOUR_MILLISECONDS_HERE)'
 
-Supports [Extension Updater](http://jdfwarrior.tumblr.com/post/13826478125/extension-updater) (possibly excessive, and currently broken).
+Supports [Extension Updater](http://jdfwarrior.tumblr.com/post/13826478125/extension-updater) ([possibly excessive](http://i.imgur.com/eBVQm.png)).
 
 #Requirements
 
