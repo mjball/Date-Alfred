@@ -1,3 +1,9 @@
+#Milliseconds-to-human converter extension for Alfred.app
+
+
+![screenshot](https://github.com/mjball/Date-Alfred/blob/master/screenshot.png?raw=true)
+![notification](https://github.com/mjball/Date-Alfred/blob/master/notification.png?raw=true)
+
 #[Just give me the download already](https://github.com/mjball/Date-Alfred/blob/master/Date.alfredextension?raw=true)
 
 #What's this about?
