@@ -1,10 +1,9 @@
 #Milliseconds-to-human converter extension for Alfred.app
 
 
-![screenshot](https://github.com/mjball/Date-Alfred/blob/master/screenshot.png?raw=true)
-![notification](https://github.com/mjball/Date-Alfred/blob/master/notification.png?raw=true)
+![screenshot](https://rawgithub.com/mjball/Date-Alfred/master/screenshot.png)
 
-#[Just give me the download already](https://github.com/mjball/Date-Alfred/blob/master/Date.alfredextension?raw=true)
+#[Just give me the download already](https://rawgithub.com/mjball/Date-Alfred/master/Date.alfredworkflow)
 
 #What's this about?
 
@@ -12,12 +11,10 @@ I got sick of firing up `node` or a browser JavaScript console for converting ms
 
 This is a shortcut for:
 
-    λ node -pe 'new Date($YOUR_MILLISECONDS_HERE)'
-
-Supports [Extension Updater](http://jdfwarrior.tumblr.com/post/13826478125/extension-updater) ([possibly excessive](http://i.imgur.com/eBVQm.png)).
+    λ node -pe '<a bunch of date formatting here>'
 
 #Requirements
 
-Alfred 1.x (and obviously the PowerPack).
+Alfred 2 (and obviously the PowerPack).
 
 Requires [node](http://nodejs.org/) to be somewhere in a `$PATH` specified by `~/.profile`, `~/.bashrc`, or `~/.zshrc`. Sorry, Alfred shell script extensions don't load much by default.
