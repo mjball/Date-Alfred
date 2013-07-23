@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>What is this I don't even</string>
+	<key>connections</key>
+	<dict>
+		<key>3F74B2B0-61EC-42AF-B833-C436A27BB3D6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0DDA7099-2081-4F9C-AA77-210F4A0FF322</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>7495AE66-3AA3-4104-984D-2C5A02687D89</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3F74B2B0-61EC-42AF-B833-C436A27BB3D6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Matt Ball</string>
+	<key>description</key>
+	<string>Milliseconds-to-human converter extension for Alfred 2</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Date</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>d</string>
+				<key>script</key>
+				<string>human_readable_ms_short=`node -pe 'var d = new Date({query}); require("util").format("%d/%d/%d %d:%s:%s.%d", d.getMonth()+1, d.getDate(), d.getFullYear(), d.getHours(), (d.getMinutes() &lt; 10 ? "0" : "") + d.getMinutes(), (d.getSeconds() &lt; 10 ? "0" : "") + d.getSeconds(), d.getMilliseconds())'`
+human_readable_ms_iso=`node -pe 'new Date({query}).toISOString()'`
+human_readable_ms_utc=`node -pe 'new Date({query}).toUTCString()'`
+human_readable_ms_long=`node -pe 'new Date({query})'`
+
+cat &lt;&lt; EOB
+
+&lt;?xml version="1.0"?&gt;
+
+&lt;items&gt;
+
+  &lt;item uid="human-readable-ms-short" arg="$human_readable_ms_short" valid="YES" type="file"&gt;
+    &lt;title&gt;$human_readable_ms_short&lt;/title&gt;
+    &lt;subtitle&gt;{query} milliseconds since the epoch. Action to copy to the clipboard&lt;/subtitle&gt;
+    &lt;icon type="fileicon"&gt;/System/Library/PreferencePanes/DateAndTime.prefPane&lt;/icon&gt;
+  &lt;/item&gt;
+
+  &lt;item uid="human-readable-ms-iso" arg="$human_readable_ms_iso" valid="YES" type="file"&gt;
+    &lt;title&gt;$human_readable_ms_iso&lt;/title&gt;
+    &lt;subtitle&gt;{query} milliseconds since the epoch, ISO format. Action to copy to the clipboard&lt;/subtitle&gt;
+    &lt;icon type="fileicon"&gt;/System/Library/PreferencePanes/DateAndTime.prefPane&lt;/icon&gt;
+  &lt;/item&gt;
+
+  &lt;item uid="human-readable-ms-utc" arg="$human_readable_ms_utc" valid="YES" type="file"&gt;
+    &lt;title&gt;$human_readable_ms_utc&lt;/title&gt;
+    &lt;subtitle&gt;{query} milliseconds since the epoch, in UTC. Action to copy to the clipboard&lt;/subtitle&gt;
+    &lt;icon type="fileicon"&gt;/System/Library/PreferencePanes/DateAndTime.prefPane&lt;/icon&gt;
+  &lt;/item&gt;
+
+  &lt;item uid="human-readable-ms-long" arg="$human_readable_ms_long" valid="YES" type="file"&gt;
+    &lt;title&gt;$human_readable_ms_long&lt;/title&gt;
+    &lt;subtitle&gt;{query} milliseconds since the epoch, in your local time. Action to copy to the clipboard&lt;/subtitle&gt;
+    &lt;icon type="fileicon"&gt;/System/Library/PreferencePanes/DateAndTime.prefPane&lt;/icon&gt;
+  &lt;/item&gt;
+
+&lt;/items&gt;
+
+EOB</string>
+				<key>subtext</key>
+				<string>You should be able to do this in your head, you know</string>
+				<key>title</key>
+				<string>Convert milliseconds to date</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>3F74B2B0-61EC-42AF-B833-C436A27BB3D6</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>0DDA7099-2081-4F9C-AA77-210F4A0FF322</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>hotkey</key>
+				<integer>2</integer>
+				<key>hotmod</key>
+				<integer>1572864</integer>
+				<key>hotstring</key>
+				<string>D</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>7495AE66-3AA3-4104-984D-2C5A02687D89</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>0DDA7099-2081-4F9C-AA77-210F4A0FF322</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+		<key>3F74B2B0-61EC-42AF-B833-C436A27BB3D6</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+		<key>7495AE66-3AA3-4104-984D-2C5A02687D89</key>
+		<dict>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://about.me/mball</string>
+</dict>
+</plist>
