@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>7495AE66-3AA3-4104-984D-2C5A02687D89</key>
@@ -26,6 +28,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -42,17 +46,77 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>2</integer>
+				<key>hotmod</key>
+				<integer>1572864</integer>
+				<key>hotstring</key>
+				<string>D</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>7495AE66-3AA3-4104-984D-2C5A02687D89</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string></string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>0DDA7099-2081-4F9C-AA77-210F4A0FF322</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>keyword</key>
 				<string>d</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
 				<key>script</key>
-				<string>human_readable_ms_short=`node -pe 'var d = new Date({query}); require("util").format("%d/%d/%d %d:%s:%s.%d", d.getMonth()+1, d.getDate(), d.getFullYear(), d.getHours(), (d.getMinutes() &lt; 10 ? "0" : "") + d.getMinutes(), (d.getSeconds() &lt; 10 ? "0" : "") + d.getSeconds(), d.getMilliseconds())'`
-human_readable_ms_iso=`node -pe 'new Date({query}).toISOString()'`
-human_readable_ms_utc=`node -pe 'new Date({query}).toUTCString()'`
-human_readable_ms_long=`node -pe 'new Date({query})'`
+				<string>human_readable_ms_short=`/usr/local/bin/node -pe 'var d = new Date({query}); require("util").format("%d/%d/%d %d:%s:%s.%d", d.getMonth()+1, d.getDate(), d.getFullYear(), d.getHours(), (d.getMinutes() &lt; 10 ? "0" : "") + d.getMinutes(), (d.getSeconds() &lt; 10 ? "0" : "") + d.getSeconds(), d.getMilliseconds())'`
+human_readable_ms_iso=`/usr/local/bin/node -pe 'new Date({query}).toISOString()'`
+human_readable_ms_utc=`/usr/local/bin/node -pe 'new Date({query}).toUTCString()'`
+human_readable_ms_long=`/usr/local/bin/node -pe 'new Date({query})'`
 
 cat &lt;&lt; EOB
 
@@ -87,6 +151,10 @@ cat &lt;&lt; EOB
 &lt;/items&gt;
 
 EOB</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>You should be able to do this in your head, you know</string>
 				<key>title</key>
@@ -100,42 +168,8 @@ EOB</string>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>3F74B2B0-61EC-42AF-B833-C436A27BB3D6</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>0DDA7099-2081-4F9C-AA77-210F4A0FF322</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>hotkey</key>
-				<integer>2</integer>
-				<key>hotmod</key>
-				<integer>1572864</integer>
-				<key>hotstring</key>
-				<string>D</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>7495AE66-3AA3-4104-984D-2C5A02687D89</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -144,16 +178,22 @@ EOB</string>
 	<dict>
 		<key>0DDA7099-2081-4F9C-AA77-210F4A0FF322</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>3F74B2B0-61EC-42AF-B833-C436A27BB3D6</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>7495AE66-3AA3-4104-984D-2C5A02687D89</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
